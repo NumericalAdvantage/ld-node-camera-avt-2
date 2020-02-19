@@ -1,0 +1,43 @@
+{
+    "file-type" : "link2-node-specification-2",
+    "$id": "l2spec:/link_dev/ld-node-camera-avt-2",
+    "pins" : 
+    {
+        "avt-camera-2-output-pin": 
+        {
+            "pin-type" : "output",
+            "supplies" : 
+            {
+                "AVTCamImage" :
+                {
+                    "data-type" :
+                    {
+                        "schema-filename" : "data/Image.bfbs",
+                        "table-name" : "link_dev.Image"
+                    }
+                }
+            }
+        }
+    },
+    "user-configuration-schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": 
+        {
+            "CameraID" : { "type" : "string"},
+            "ImageWidth" : { "type" : "number"},
+            "ImageHeight" : { "type" : "number"},
+            "OutputFormat" : {"type" : "string"},
+            "CompressionQuality" : { "type" : "number", "default" : 0},
+            "Binning" : { "type" : "number"},
+            "FPS" : { "type" : "number"},
+            "UseJumboPackets" : { "type" : "boolean"},
+            "AutoExposure" : { "type" : "boolean"},
+            "ContinuousAutoExposure" : { "type" : "boolean"},
+            "XMLFile" : { "type" : "string", "default" : "" },
+            "PreferConfig" : { "type" : "boolean"}
+        },
+        "required": ["CameraID", "ImageWidth", "ImageHeight", "OutputFormat", "Binning", "FPS", "UseJumboPackets", "AutoExposure", "ContinuousAutoExposure", "PreferConfig"],
+        "additionalProperties" : false
+    }
+}

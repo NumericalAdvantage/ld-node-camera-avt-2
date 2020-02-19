@@ -1,0 +1,31 @@
+{
+    "file-type" : "link2-node-instance-2",
+    "$id": "l2node:/link_dev/ld-node-camera-avt-2",
+    "specification": "l2spec:/link_dev/ld-node-camera-avt-2",
+    "pins" : 
+    {
+        "avt-camera-2-output-pin" : 
+        {
+            "dataobject-queue-capacity" : "1000dos",
+            "offers" :  
+            {
+                "AVTCamImage" : ["l2offer:/AVTCamImage"]
+            }
+        }
+    },
+    "user-configuration" : 
+    {
+        "CameraID" : "50-0536873671",
+        "ImageWidth" : 640,
+        "ImageHeight" : 480,
+        "OutputFormat" : "raw",
+        "CompressionQuality" : 50,
+        "Binning" : 2,
+        "FPS" : 1,
+        "UseJumboPackets" : true,
+        "AutoExposure" : true,
+        "ContinuousAutoExposure" : true,
+        "XMLFile" : "/home/rgh/autnms/avtcam/misc/perfanalysis/vimba_fullres_49fps.xml",
+        "PreferConfig" : true
+    }
+}
